@@ -1,0 +1,41 @@
+$kng-selected-color: #616161;
+$kng-placeholder-color: lighten($kng-selected-color, 10%);
+//$kng-arrow-color: #c7c7c7;
+$kng-vertical-padding-adjust: 2px;
+
+// important to display as block, otherwise container doesn't
+// have height, and loses all margins
+.kng-select-list {
+  display: block;
+}
+
+.kng-select-list-item {
+  color: $kng-placeholder-color;
+  &.kng-select-selected {
+    color: $kng-selected-color;
+  }
+  .icon {
+    //font-size: $kng-icon-font-size;
+  }
+}
+
+.kng-select-label {
+  padding-top: $kng-vertical-padding-adjust;
+  padding-bottom: $kng-vertical-padding-adjust;
+  &:after {
+    display: none;
+  }
+  .input-label {
+    font-size: 14px;
+  }
+  .kng-select-list-item {
+    width: 65%;
+    padding: 14px 30px 14px 0;
+    display: block;
+    border: none;
+    background-color: transparent;
+    .icon {
+      //color: $kng-arrow-color;
+    }
+  }
+}
